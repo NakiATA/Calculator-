@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* background creation */
+html {
+    background-image: url(image/table.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    user-select: none;
+}
+
+/* grid design and creation of the background style of the calculator */
+.container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 4px;
+    max-width: 360px;
+    margin: 50px auto;
+   margin-top: 120px;
+    width: 300px;
+    height: 520px;
+    border-radius: 20px;
+    background: rgb(110, 170, 62);
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    padding: 10px;
+    box-shadow: 4px 4px 4px #1c1d1c;
+}
+
+/* button style */
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    color: rgb(255, 248, 248);
+    padding: 20px;
+    background: rgb(63, 62, 62);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 25px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 5px #21221f;
+    transform: translateY(3px);
+}
+
+/* screen parameters */
+form {
+    max-width: 100%;
+    border-radius: 6px;
+    border: 5px solid rgb(34, 77, 10);
+}
+
+input {
+    width: 100%;
+    height: 70px;
+    border: none;
+    font-size: 30px;
+    outline: none;
+    text-align: right;
+    color: white;
+    background-color: #1c1d1c;
+}
+
+.input {
+    grid-column: 1/-1;
+    padding: 0;
+}
+/*  */
+
+/* style of individual buttons and click animation */
+.bg-green {
+    background-color:  #a7cf15;
+    box-shadow: 0 5px #5b6e22;
+    transform: translateY(3px);
+}
+
+.bg-grey {
+    background-color:  #a6a6a6;
+    box-shadow: 0 5px #5e5f5b;
+    transform: translateY(3px);
+}
+
+.item:hover {
+    filter: brightness(120%);
+}
+
+.item:active {
+    filter: brightness(90%);
+    box-shadow: 0 1px #a6a6a6;
+    transform: translateY(5px);
+}
